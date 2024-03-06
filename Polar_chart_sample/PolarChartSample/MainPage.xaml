@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:PolarChartSample"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             x:Class="PolarChartSample.MainPage">
+
+    <!--<ContentPage.BindingContext>
+        <model:ViewModel/>
+    </ContentPage.BindingContext>
+
+    <chart:SfPolarChart>
+
+    <chart:SfPolarChart.Title>
+        <Label Text="Plant Analysis" HorizontalTextAlignment="Center"/>
+    </chart:SfPolarChart.Title>
+
+    <chart:SfPolarChart.Legend>
+        <chart:ChartLegend/>
+    </chart:SfPolarChart.Legend>
+
+    <chart:SfPolarChart.PrimaryAxis>
+        <chart:CategoryAxis/>
+    </chart:SfPolarChart.PrimaryAxis>
+
+    <chart:SfPolarChart.SecondaryAxis>
+        <chart:NumericalAxis/>
+    </chart:SfPolarChart.SecondaryAxis>
+
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction"
+                           YBindingPath="Tree" Label="Tree" EnableTooltip="True" ShowDataLabels="True"/>
+
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" 
+                           YBindingPath="Weed" Label="Weed" EnableTooltip="True" ShowDataLabels="True"/>
+
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction"
+                   YBindingPath="Flower" Label="Flower" EnableTooltip="True" ShowDataLabels="True"/>
+</chart:SfPolarChart>-->
+
+
+</ContentPage>
