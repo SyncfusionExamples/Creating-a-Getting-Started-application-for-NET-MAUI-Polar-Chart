@@ -5,7 +5,7 @@
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
              x:Class="PolarChartSample.MainPage">
 
-    <!--<ContentPage.BindingContext>
+    <ContentPage.BindingContext>
         <model:ViewModel/>
     </ContentPage.BindingContext>
 
@@ -35,7 +35,7 @@
 
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction"
                    YBindingPath="Flower" Label="Flower" EnableTooltip="True" ShowDataLabels="True"/>
-</chart:SfPolarChart>-->
+</chart:SfPolarChart>
 
 
 </ContentPage>

@@ -215,7 +215,6 @@ The title of the chart provides quick information to the user about the data bei
 ```
 ###### C#
 ```C#
-{% highlight C# %}
 
     SfPolarChart chart = new SfPolarChart();
     chart.Title = new Label
@@ -259,7 +258,6 @@ The legend provides information about the data point displayed in the chart. The
         . . .
     </chart:SfPolarChart>
 ```
-{% highlight C# %}
 ###### C#
 ```C#
     SfPolarChart chart = new SfPolarChart();
@@ -404,4 +402,4 @@ The following code example gives you the complete code of above configurations.
 
 The following chart is created as a result of the previous codes.
 
-![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_polar_chart.png)
+![Getting started for .NET MAUI Chart](Getting_start_images/MAUI_polar_chart.png)
