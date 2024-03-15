@@ -32,10 +32,6 @@ This section explains how to populate the Polar chart with data, a title, data l
         }   
     }
 
-{% endhighlight %}
-
-{% endtabs %}
-
 ## Register the handler
 
 The Syncfusion.Maui.Core NuGet package is a dependent package for all Syncfusion controls in .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
