@@ -9,9 +9,6 @@ This section explains how to populate the Polar chart with data, a title, data l
 3. To initialize the control, import the Chart namespace.
 4. Initialize the [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-23%2Ctabid-18%2Ctabid-12%2Ctabid-14%2Ctabid-20%2Ctabid-16).
 
-{% tabs %} 
-
-{% highlight xaml %}
 
     <ContentPage
         . . .    
@@ -21,9 +18,6 @@ This section explains how to populate the Polar chart with data, a title, data l
         </Grid>
     </ContentPage>
     
-{% endhighlight %}
-
-{% highlight C# %}
 
     using Syncfusion.Maui.Charts;
     namespace ChartGettingStarted
