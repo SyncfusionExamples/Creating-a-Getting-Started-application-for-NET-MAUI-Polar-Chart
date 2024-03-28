@@ -12,7 +12,7 @@
     <chart:SfPolarChart>
 
     <chart:SfPolarChart.Title>
-        <Label Text="Plant Analysis" HorizontalTextAlignment="Center" Padding="0,20,0,0"/>
+        <Label Text="Plant Analysis" HorizontalTextAlignment="Center"/>
     </chart:SfPolarChart.Title>
 
     <chart:SfPolarChart.Legend>
