@@ -24,16 +24,16 @@
     </chart:SfPolarChart.PrimaryAxis>
 
     <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis/>
+        <chart:NumericalAxis Maximum="100"/>
     </chart:SfPolarChart.SecondaryAxis>
 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction"
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction"
                            YBindingPath="Tree" Label="Tree" EnableTooltip="True" ShowDataLabels="True"/>
 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" 
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" 
                            YBindingPath="Weed" Label="Weed" EnableTooltip="True" ShowDataLabels="True"/>
 
-    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction"
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}" XBindingPath="Direction"
                    YBindingPath="Flower" Label="Flower" EnableTooltip="True" ShowDataLabels="True"/>
 </chart:SfPolarChart>
 
