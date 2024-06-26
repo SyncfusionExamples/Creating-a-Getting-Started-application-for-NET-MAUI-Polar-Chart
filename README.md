@@ -203,23 +203,25 @@ NumericalAxis secondaryAxis = new NumericalAxis()
 chart.SecondaryAxis = secondaryAxis;
 
 //Initialize the series
-PolarLineSeries series = new PolarLineSeries();
-series.ItemsSource = (new ViewModel()).PlantDetails;
-series.XBindingPath = "Direction";
-series.YBindingPath = "Tree";
+PolarLineSeries series1 = new PolarLineSeries();
+series1.ItemsSource = (new ViewModel()).PlantDetails;
+series1.XBindingPath = "Direction";
+series1.YBindingPath = "Tree";
 
-PolarLineSeries series = new PolarLineSeries();
-series.ItemsSource = (new ViewModel()).PlantDetails;
-series.XBindingPath = "Direction";
-series.YBindingPath = "Weed";
+PolarLineSeries series2 = new PolarLineSeries();
+series2.ItemsSource = (new ViewModel()).PlantDetails;
+series2.XBindingPath = "Direction";
+series2.YBindingPath = "Weed";
 
-PolarLineSeries series = new PolarLineSeries();
-series.ItemsSource = (new ViewModel()).PlantDetails;
-series.XBindingPath = "Direction";
-series.YBindingPath = "Flower";
+PolarLineSeries series3 = new PolarLineSeries();
+series3.ItemsSource = (new ViewModel()).PlantDetails;
+series3.XBindingPath = "Direction";
+series3.YBindingPath = "Flower";
 
 //Adding Series to the Chart Series Collection
-chart.Series.Add(series);
+chart.Series.Add(series1);
+chart.Series.Add(series2);
+chart.Series.Add(series3);
 ```
 
 ## Add a title
@@ -264,9 +266,9 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 ```C#
 SfPolarChart chart = new SfPolarChart()
 . . .
-PolarLineSeries series = new PolarLineSeries();
-series.ShowDataLabels = true;
-chart.Series.Add(series);
+PolarLineSeries series1 = new PolarLineSeries();
+series1.ShowDataLabels = true;
+chart.Series.Add(series1);
 ``` 
 
 ## Enable a legend
@@ -309,23 +311,23 @@ chart.Legend = new ChartLegend();
 
 ###### C#
 ```C#
-PolarLineSeries series = new PolarLineSeries(); 
-series.ItemsSource = (new ViewModel()).PlantDetails;
-series.XBindingPath = "Direction"; 
-series.YBindingPath = "Tree"; 
-series.Label = "Tree";
+PolarLineSeries series1 = new PolarLineSeries(); 
+series1.ItemsSource = (new ViewModel()).PlantDetails;
+series1.XBindingPath = "Direction"; 
+series1.YBindingPath = "Tree"; 
+series1.Label = "Tree";
 
-PolarLineSeries series = new PolarLineSeries();
-series.ItemsSource = (new ViewModel()).PlantDetails;
-series.XBindingPath = "Direction";
-series.YBindingPath = "Weed";
-series.Label = "Weed";
+PolarLineSeries series2 = new PolarLineSeries();
+series2.ItemsSource = (new ViewModel()).PlantDetails;
+series2.XBindingPath = "Direction";
+series2.YBindingPath = "Weed";
+series2.Label = "Weed";
 
-PolarLineSeries series = new PolarLineSeries();
-series.ItemsSource = (new ViewModel()).PlantDetails;
-series.XBindingPath = "Direction";
-series.YBindingPath = "Flower";
-series.Label = "Flower";
+PolarLineSeries series3 = new PolarLineSeries();
+series3.ItemsSource = (new ViewModel()).PlantDetails;
+series3.XBindingPath = "Direction";
+series3.YBindingPath = "Flower";
+series3.Label = "Flower";
 ``` 
 
 ## Enable tooltip
@@ -343,8 +345,8 @@ Tooltips are used to display information about a segment when a user hovers over
 
 ###### C#
 ```C#
-PolarLineSeries series = new PolarLineSeries();
-series.EnableTooltip = true;
+PolarLineSeries series1 = new PolarLineSeries();
+series1.EnableTooltip = true;
 ```
 
 The following code example gives you the complete code of above configurations.
@@ -422,7 +424,7 @@ The following code example gives you the complete code of above configurations.
                  };
                 chart.SecondaryAxis = secondaryAxis;
 
-                PolarLineSeries series = new PolarLineSeries()
+                PolarLineSeries series1 = new PolarLineSeries()
                 {
                     ItemsSource = (new ViewModel()).PlantDetails,
                     XBindingPath = "Direction",
@@ -432,7 +434,7 @@ The following code example gives you the complete code of above configurations.
                     ShowDataLabels="True"
                 }; 
 
-                PolarLineSeries series = new PolarLineSeries()
+                PolarLineSeries series2 = new PolarLineSeries()
                 {
                     ItemsSource = (new ViewModel()).PlantDetails,
                     XBindingPath = "Direction",
@@ -442,7 +444,7 @@ The following code example gives you the complete code of above configurations.
                     ShowDataLabels="True"
                 }; 
 
-                PolarLineSeries series = new PolarLineSeries()
+                PolarLineSeries series3 = new PolarLineSeries()
                 {
                     ItemsSource = (new ViewModel()).PlantDetails,
                     XBindingPath = "Direction",
@@ -452,7 +454,9 @@ The following code example gives you the complete code of above configurations.
                     ShowDataLabels="True"
                 };   
 
-                chart.Series.Add(series);
+                chart.Series.Add(series1);
+                chart.Series.Add(series2);
+                chart.Series.Add(series3);
                 this.Content = chart;
             }
         }   
