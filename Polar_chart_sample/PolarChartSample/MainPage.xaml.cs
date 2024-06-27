@@ -13,9 +13,12 @@ namespace PolarChartSample
             //polarChart.Title = new Label() { Text = "Plant Analysis", HorizontalTextAlignment = TextAlignment.Center };
             //polarChart.Legend = new ChartLegend();
             //polarChart.PrimaryAxis = new CategoryAxis();
-            //polarChart.SecondaryAxis = new NumericalAxis();
+            //polarChart.SecondaryAxis = new NumericalAxis()
+            //{
+            //    Maximum = 100
+            //};
 
-            //PolarAreaSeries series1 = new PolarAreaSeries()
+            //PolarLineSeries series1 = new PolarLineSeries()
             //{
             //    ItemsSource = (new ViewModel()).PlantDetails,
             //    XBindingPath = "Direction",
@@ -25,7 +28,7 @@ namespace PolarChartSample
             //    ShowDataLabels = true,
             //};
 
-            //PolarAreaSeries series2 = new PolarAreaSeries()
+            //PolarLineSeries series2 = new PolarLineSeries()
             //{
             //    ItemsSource = (new ViewModel()).PlantDetails,
             //    XBindingPath = "Direction",
@@ -35,7 +38,7 @@ namespace PolarChartSample
             //    ShowDataLabels = true,
             //};
 
-            //PolarAreaSeries series3 = new PolarAreaSeries()
+            //PolarLineSeries series3 = new PolarLineSeries()
             //{
             //    ItemsSource = (new ViewModel()).PlantDetails,
             //    XBindingPath = "Direction",
