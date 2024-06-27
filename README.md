@@ -277,7 +277,7 @@ The legend provides information about the data point displayed in the chart. The
 
 ###### Xaml
 ```xaml
-<chart:SfPolarChart >
+<chart:SfPolarChart>
     . . .
     <chart:SfPolarChart.Legend>
         <chart:ChartLegend/>
