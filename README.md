@@ -179,11 +179,11 @@ To create a polar chart, you can add a [PolarLineSeries](https://help.syncfusion
         </chart:NumericalAxis>
     </chart:SfPolarChart.SecondaryAxis>
 
-    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree" />
+    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Tree"/>
         
-    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed" />
+    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Weed"/>
 
-    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower" />
+    <chart:PolarLineSeries  ItemsSource="{Binding PlantDetails}" XBindingPath="Direction" YBindingPath="Flower"/>
 </chart:SfPolarChart>
 ```
 
@@ -258,7 +258,7 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 <chart:SfPolarChart>
     . . . 
     <chart:PolarLineSeries ShowDataLabels="True">
-    </chart:PolarLineSeries >
+    </chart:PolarLineSeries>
 </chart:SfPolarChart>
  ```
 
