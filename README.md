@@ -465,5 +465,6 @@ The following code example gives you the complete code of above configurations.
 
 The following chart is created as a result of the previous codes.
 
-<img width="554" alt="polar-README" src="https://github.com/SyncfusionExamples/Creating-a-Getting-Started-application-for-NET-MAUI-Polar-Chart/assets/103025761/01e0c860-be28-4051-b9cb-1d87a4532f07">
+![MAUI_polar_chartdemo](https://github.com/user-attachments/assets/3850d4b4-e94d-489e-b705-5239168fdc52)
+
 
