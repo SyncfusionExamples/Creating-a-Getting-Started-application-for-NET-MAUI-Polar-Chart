@@ -465,6 +465,7 @@ The following code example gives you the complete code of above configurations.
 
 The following chart is created as a result of the previous codes.
 
-![MAUI_polar_chartdemo](https://github.com/user-attachments/assets/3850d4b4-e94d-489e-b705-5239168fdc52)
+![MAUI_polar_chartdemo](https://github.com/user-attachments/assets/9903e1f6-0410-41f2-a66f-4c5433fba84f)
+
 
 
