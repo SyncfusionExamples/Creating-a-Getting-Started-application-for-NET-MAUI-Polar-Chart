@@ -98,13 +98,13 @@ Next, create a view model class and initialize a list of `PlantData` objects as 
             PlantDetails  = new List<PlantData>()
             {
                 new PlantData(){ Direction = "North", Tree = 80, Flower = 42, Weed = 63},
-                new PlantData(){ Direction = "NorthWest", Tree = 85, Flower = 40, Weed = 70},
-                new PlantData(){ Direction = "West", Tree = 78 , Flower = 47, Weed = 65},
-                new PlantData(){ Direction = "SouthWest", Tree = 90 , Flower = 40, Weed = 70},
+                new PlantData(){ Direction = "NorthEast", Tree = 85, Flower = 40, Weed = 70},
+                new PlantData(){ Direction = "East", Tree = 78 , Flower = 47, Weed = 65},
+                new PlantData(){ Direction = "SouthEast", Tree = 90 , Flower = 40, Weed = 70},
                 new PlantData(){ Direction = "South", Tree = 78 , Flower = 27, Weed = 47},
-                new PlantData(){ Direction = "SouthEast", Tree = 83 , Flower = 45, Weed = 65},
-                new PlantData(){ Direction = "East", Tree = 79 , Flower = 40, Weed = 58},
-                new PlantData(){ Direction = "NorthEast", Tree = 88 , Flower = 38, Weed = 73}
+                new PlantData(){ Direction = "SouthWest", Tree = 83 , Flower = 45, Weed = 65},
+                new PlantData(){ Direction = "West", Tree = 79 , Flower = 40, Weed = 58},
+                new PlantData(){ Direction = "NorthWest", Tree = 88 , Flower = 38, Weed = 73}
             }; 
         }
     }
@@ -465,5 +465,7 @@ The following code example gives you the complete code of above configurations.
 
 The following chart is created as a result of the previous codes.
 
-<img width="554" alt="polar-README" src="https://github.com/SyncfusionExamples/Creating-a-Getting-Started-application-for-NET-MAUI-Polar-Chart/assets/103025761/01e0c860-be28-4051-b9cb-1d87a4532f07">
+![MAUI_polar_chartdemo](https://github.com/user-attachments/assets/9903e1f6-0410-41f2-a66f-4c5433fba84f)
+
+
 
