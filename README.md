@@ -76,7 +76,7 @@ Now, let us define a simple data model that represents a data point on the chart
 
 ###### C#
 ```C#
-    public class PlantData   
+    public class PlantModel   
     {   
         public string Direction { get; set; }
         public double Tree { get; set; }
@@ -85,34 +85,34 @@ Now, let us define a simple data model that represents a data point on the chart
     }
 ```
 
-Next, create a view model class and initialize a list of `PlantData` objects as follows.
+Next, create a PlantViewModel class and initialize a list of `PlantModel` objects as follows.
 
 ###### 
 ```C#
-    public class ViewModel  
+    public class PlantViewModel  
     {
-        public List<PlantData> PlantDetails { get; set; }      
+        public List<PlantModel> PlantDetails { get; set; }      
 
-        public ViewModel()       
+        public PlantViewModel()       
         {
-            PlantDetails  = new List<PlantData>()
+            PlantDetails  = new List<PlantModel>()
             {
-                new PlantData(){ Direction = "North", Tree = 80, Flower = 42, Weed = 63},
-                new PlantData(){ Direction = "NorthEast", Tree = 85, Flower = 40, Weed = 70},
-                new PlantData(){ Direction = "East", Tree = 78 , Flower = 47, Weed = 65},
-                new PlantData(){ Direction = "SouthEast", Tree = 90 , Flower = 40, Weed = 70},
-                new PlantData(){ Direction = "South", Tree = 78 , Flower = 27, Weed = 47},
-                new PlantData(){ Direction = "SouthWest", Tree = 83 , Flower = 45, Weed = 65},
-                new PlantData(){ Direction = "West", Tree = 79 , Flower = 40, Weed = 58},
-                new PlantData(){ Direction = "NorthWest", Tree = 88 , Flower = 38, Weed = 73}
+                new PlantModel(){ Direction = "North", Tree = 80, Flower = 42, Weed = 63},
+                new PlantModel(){ Direction = "NorthEast", Tree = 85, Flower = 40, Weed = 70},
+                new PlantModel(){ Direction = "East", Tree = 78 , Flower = 47, Weed = 65},
+                new PlantModel(){ Direction = "SouthEast", Tree = 90 , Flower = 40, Weed = 70},
+                new PlantModel(){ Direction = "South", Tree = 78 , Flower = 27, Weed = 47},
+                new PlantModel(){ Direction = "SouthWest", Tree = 83 , Flower = 45, Weed = 65},
+                new PlantModel(){ Direction = "West", Tree = 79 , Flower = 40, Weed = 58},
+                new PlantModel(){ Direction = "NorthWest", Tree = 88 , Flower = 38, Weed = 73}
             }; 
         }
     }
 ```
 
-Create a `ViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from the `ViewModel` class.
+Create a `PlantViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from the `PlantViewModel` class.
  
-* Add the namespace of the `ViewModel` class to your XAML page, if you prefer to set the `BindingContext` in XAML.
+* Add the namespace of the `PlantViewModel` class to your XAML page, if you prefer to set the `BindingContext` in XAML.
 
 ###### Xaml
 ```xaml 
@@ -124,14 +124,14 @@ Create a `ViewModel` instance and set it as the chart's `BindingContext`. This e
     xmlns:model="clr-namespace:ChartGettingStarted">
 
     <ContentPage.BindingContext>
-        <model:ViewModel></model:ViewModel>
+        <model:PlantViewModel/>
     </ContentPage.BindingContext>
 </ContentPage>
 ```
 
 ###### C#
 ```C#
-    this.BindingContext = new ViewModel();
+    this.BindingContext = new PlantViewModel();
 ``` 
 
 ## Initialize Chart axis
@@ -162,7 +162,7 @@ chart.SecondaryAxis = secondaryAxis;
 
 ## Populate Chart with data
 
-To create a polar chart, you can add a [PolarLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarLineSeries.html?tabs=tabid-1%2Ctabid-4) to the polar chart [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_Series) property of the chart, and  then bind the `PlantData` property of the above `ViewModel` to the `PolarLineSeries.ItemsSource` as follows.
+To create a polar chart, you can add a [PolarLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarLineSeries.html) to the polar chart [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_Series) property of the chart, and  then bind the `PlantDetails` property of the above `PlantViewModel` to the `PolarLineSeries.ItemsSource` as follows.
 
 * In order to plot the series, the [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) and [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath) properties need to be configured correctly. These properties allow the chart to retrieve values from the corresponding properties in the data model.
 
@@ -204,17 +204,17 @@ chart.SecondaryAxis = secondaryAxis;
 
 //Initialize the series
 PolarLineSeries series1 = new PolarLineSeries();
-series1.ItemsSource = (new ViewModel()).PlantDetails;
+series1.ItemsSource = (new PlantViewModel()).PlantDetails;
 series1.XBindingPath = "Direction";
 series1.YBindingPath = "Tree";
 
 PolarLineSeries series2 = new PolarLineSeries();
-series2.ItemsSource = (new ViewModel()).PlantDetails;
+series2.ItemsSource = (new PlantViewModel()).PlantDetails;
 series2.XBindingPath = "Direction";
 series2.YBindingPath = "Weed";
 
 PolarLineSeries series3 = new PolarLineSeries();
-series3.ItemsSource = (new ViewModel()).PlantDetails;
+series3.ItemsSource = (new PlantViewModel()).PlantDetails;
 series3.XBindingPath = "Direction";
 series3.YBindingPath = "Flower";
 
@@ -312,19 +312,19 @@ chart.Legend = new ChartLegend();
 ###### C#
 ```C#
 PolarLineSeries series1 = new PolarLineSeries(); 
-series1.ItemsSource = (new ViewModel()).PlantDetails;
+series1.ItemsSource = (new PlantViewModel()).PlantDetails;
 series1.XBindingPath = "Direction"; 
 series1.YBindingPath = "Tree"; 
 series1.Label = "Tree";
 
 PolarLineSeries series2 = new PolarLineSeries();
-series2.ItemsSource = (new ViewModel()).PlantDetails;
+series2.ItemsSource = (new PlantViewModel()).PlantDetails;
 series2.XBindingPath = "Direction";
 series2.YBindingPath = "Weed";
 series2.Label = "Weed";
 
 PolarLineSeries series3 = new PolarLineSeries();
-series3.ItemsSource = (new ViewModel()).PlantDetails;
+series3.ItemsSource = (new PlantViewModel()).PlantDetails;
 series3.XBindingPath = "Direction";
 series3.YBindingPath = "Flower";
 series3.Label = "Flower";
@@ -361,7 +361,7 @@ The following code example gives you the complete code of above configurations.
     xmlns:model="clr-namespace:ChartGettingStarted">
 
     <ContentPage.BindingContext>
-    <model:ViewModel></model:ViewModel>
+        <model:PlantViewModel/>
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
@@ -426,7 +426,7 @@ The following code example gives you the complete code of above configurations.
 
                 PolarLineSeries series1 = new PolarLineSeries()
                 {
-                    ItemsSource = (new ViewModel()).PlantDetails,
+                    ItemsSource = (new PlantViewModel()).PlantDetails,
                     XBindingPath = "Direction",
                     YBindingPath = "Tree",
                     Label="Tree", 
@@ -436,7 +436,7 @@ The following code example gives you the complete code of above configurations.
 
                 PolarLineSeries series2 = new PolarLineSeries()
                 {
-                    ItemsSource = (new ViewModel()).PlantDetails,
+                    ItemsSource = (new PlantViewModel()).PlantDetails,
                     XBindingPath = "Direction",
                     YBindingPath = "Weed",
                     Label="Weed", 
@@ -446,7 +446,7 @@ The following code example gives you the complete code of above configurations.
 
                 PolarLineSeries series3 = new PolarLineSeries()
                 {
-                    ItemsSource = (new ViewModel()).PlantDetails,
+                    ItemsSource = (new PlantViewModel()).PlantDetails,
                     XBindingPath = "Direction",
                     YBindingPath = "Flower",
                     Label="Flower", 

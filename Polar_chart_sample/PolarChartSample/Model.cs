@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PolarChartSample
 {
-    public class Model
+    public class PlantModel
     {
         public string? Direction { get; set; }
         public double Tree { get; set; }
