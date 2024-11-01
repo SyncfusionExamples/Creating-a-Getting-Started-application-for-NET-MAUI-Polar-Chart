@@ -6,7 +6,7 @@
              x:Class="PolarChartSample.MainPage">
 
     <ContentPage.BindingContext>
-        <model:ViewModel/>
+        <model:PlantViewModel/>
     </ContentPage.BindingContext>
 
     <chart:SfPolarChart>
